@@ -72,6 +72,7 @@
     <Compile Include="Controller\LoginController.cs" />
     <Compile Include="Controller\KhachHangController.cs" />
     <Compile Include="Controller\LoaiHangController.cs" />
+    <Compile Include="Controller\SanPhamController.cs" />
     <Compile Include="cryKhachHang.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -80,11 +81,18 @@
     </Compile>
     <Compile Include="Model\KhachHang.cs" />
     <Compile Include="Model\LoaiHangModel.cs" />
+    <Compile Include="Model\SanPhamModel.cs" />
     <Compile Include="View\Customer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Customer.Designer.cs">
       <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmHoaDonBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmHoaDonBan.Designer.cs">
+      <DependentUpon>frmHoaDonBan.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmLoaiHang.cs">
       <SubType>Form</SubType>
@@ -124,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmHoaDonBan.resx">
+      <DependentUpon>frmHoaDonBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmLoaiHang.resx">
       <DependentUpon>frmLoaiHang.cs</DependentUpon>

@@ -242,12 +242,13 @@ namespace BTL_QLBH.Controller
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
+                MessageBox.Show(maKH);
+
                 string query = "DELETE FROM tblKhachHang WHERE sMaKH = @MaKH";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@MaKH", maKH);
-
                     connection.Open();
                     int rowsAffected = command.ExecuteNonQuery();
                     return rowsAffected > 0;

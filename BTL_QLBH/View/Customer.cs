@@ -168,7 +168,6 @@ namespace BTL_QLBH.View
         private void deleteKhachHang_Click(object sender, EventArgs e)
         {
             string maKhach = txtMaKH.Text;
-
             if (_khachHangController.XoaKhachHang(maKhach))
             {
                 MessageBox.Show("Xóa khách hàng thành công!");
