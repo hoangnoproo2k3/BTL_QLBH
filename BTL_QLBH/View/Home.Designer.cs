@@ -34,7 +34,7 @@
             this.staffMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.danhMụcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.customerMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.productMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.loaiHangMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýHóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createInvoiceMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.searchEnvoiceMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,7 +50,7 @@
             this.quảnLýHóaĐơnToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -74,7 +74,7 @@
             // 
             this.danhMụcToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.customerMenu,
-            this.productMenu});
+            this.loaiHangMenu});
             this.danhMụcToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("danhMụcToolStripMenuItem.Image")));
             this.danhMụcToolStripMenuItem.Name = "danhMụcToolStripMenuItem";
             this.danhMụcToolStripMenuItem.Size = new System.Drawing.Size(110, 24);
@@ -88,12 +88,13 @@
             this.customerMenu.Text = "Khách Hàng";
             this.customerMenu.Click += new System.EventHandler(this.customerMenu_Click);
             // 
-            // productMenu
+            // loaiHangMenu
             // 
-            this.productMenu.Image = ((System.Drawing.Image)(resources.GetObject("productMenu.Image")));
-            this.productMenu.Name = "productMenu";
-            this.productMenu.Size = new System.Drawing.Size(224, 26);
-            this.productMenu.Text = "Mặt Hàng";
+            this.loaiHangMenu.Image = ((System.Drawing.Image)(resources.GetObject("loaiHangMenu.Image")));
+            this.loaiHangMenu.Name = "loaiHangMenu";
+            this.loaiHangMenu.Size = new System.Drawing.Size(224, 26);
+            this.loaiHangMenu.Text = "Loại Hàng";
+            this.loaiHangMenu.Click += new System.EventHandler(this.loaiHangMenu_Click);
             // 
             // quảnLýHóaĐơnToolStripMenuItem
             // 
@@ -109,14 +110,14 @@
             // 
             this.createInvoiceMenu.Image = ((System.Drawing.Image)(resources.GetObject("createInvoiceMenu.Image")));
             this.createInvoiceMenu.Name = "createInvoiceMenu";
-            this.createInvoiceMenu.Size = new System.Drawing.Size(219, 26);
+            this.createInvoiceMenu.Size = new System.Drawing.Size(224, 26);
             this.createInvoiceMenu.Text = "Lập Hóa Đơn";
             // 
             // searchEnvoiceMenu
             // 
             this.searchEnvoiceMenu.Image = ((System.Drawing.Image)(resources.GetObject("searchEnvoiceMenu.Image")));
             this.searchEnvoiceMenu.Name = "searchEnvoiceMenu";
-            this.searchEnvoiceMenu.Size = new System.Drawing.Size(219, 26);
+            this.searchEnvoiceMenu.Size = new System.Drawing.Size(224, 26);
             this.searchEnvoiceMenu.Text = "Tìm Kiếm Hóa Đơn";
             // 
             // Home
@@ -144,7 +145,7 @@
         private System.Windows.Forms.ToolStripMenuItem danhMụcToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem customerMenu;
         private System.Windows.Forms.ToolStripMenuItem quảnLýHóaĐơnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem productMenu;
+        private System.Windows.Forms.ToolStripMenuItem loaiHangMenu;
         private System.Windows.Forms.ToolStripMenuItem createInvoiceMenu;
         private System.Windows.Forms.ToolStripMenuItem searchEnvoiceMenu;
         private System.Windows.Forms.ToolStripMenuItem staffMenu;

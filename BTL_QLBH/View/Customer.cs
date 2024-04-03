@@ -98,6 +98,13 @@ namespace BTL_QLBH.View
                 MessageBox.Show("Ngày sinh không thể là ngày hôm nay!");
                 return; // Không thực hiện thêm khách hàng nếu ngày sinh là ngày hôm nay
             }
+            // Kiểm tra xem mã khách hàng đã tồn tại hay chưa
+            string maKH = txtMaKH.Text.Trim();
+            if (_khachHangController.KhachHangTonTai(maKH))
+            {
+                MessageBox.Show("Mã khách hàng đã tồn tại!");
+                return; // Không thực hiện thêm khách hàng nếu mã đã tồn tại
+            }
             KhachHang khachHang = new KhachHang();
             khachHang.MaKH = txtMaKH.Text;
             khachHang.TenKh = txtTenKh.Text;

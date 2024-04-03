@@ -24,5 +24,12 @@ namespace BTL_QLBH.View
             customer.Dock = DockStyle.Fill;
             customer.Show();
         }
+        private void loaiHangMenu_Click(object sender, EventArgs e)
+        {
+            frmLoaiHang loaiHang = new frmLoaiHang();
+            loaiHang.MdiParent = this;
+            loaiHang.Dock = DockStyle.Fill;
+            loaiHang.Show();
+        }
     }
 }

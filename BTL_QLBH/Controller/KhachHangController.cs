@@ -17,6 +17,25 @@ namespace BTL_QLBH.Controller
         {
             _connectionString = connectionString;
         }
+        public bool KhachHangTonTai(string maKH)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                string query = "SELECT COUNT(*) FROM tblKhachHang WHERE sMaKH = @MaKH";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@MaKH", maKH);
+
+                    connection.Open();
+                    int count = (int)command.ExecuteScalar();
+
+                    // Trả về true nếu mã khách hàng đã tồn tại, ngược lại trả về false
+                    return count > 0;
+                }
+            }
+        }
+
         public List<KhachHang> LayDanhSachKhachHang()
         {
             List<KhachHang> danhSachKhachHang = new List<KhachHang>();

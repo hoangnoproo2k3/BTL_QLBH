@@ -71,6 +71,44 @@ namespace BTL_QLBH.Controller
 
             return danhSachLoaiHang;
         }
+        public List<LoaiHangModel> TimKiemLoaiHangAll(string maLoai, string tenLoai)
+        {
+            List<LoaiHangModel> danhSachLoaiHang = new List<LoaiHangModel>();
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                StringBuilder queryBuilder = new StringBuilder("SELECT sMaLoai, sTenLoai FROM tblLoaiHang WHERE 1 = 1");
+                if (!string.IsNullOrEmpty(maLoai))
+                {
+                    queryBuilder.Append(" AND sMaLoai LIKE @MaKH");
+                }
+                if (!string.IsNullOrEmpty(tenLoai))
+                {
+                    queryBuilder.Append(" AND sTenLoai LIKE @TenKH");
+                }
+                using (SqlCommand command = new SqlCommand(queryBuilder.ToString(), connection))
+                {
+                    command.Parameters.AddWithValue("@MaKH", string.IsNullOrEmpty(maLoai) ? DBNull.Value : (object)("%" + maLoai + "%"));
+                    command.Parameters.AddWithValue("@TenKH", string.IsNullOrEmpty(tenLoai) ? DBNull.Value : (object)("%" + tenLoai + "%"));
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            danhSachLoaiHang.Add(new LoaiHangModel
+                            {
+                                MaLoai = reader["sMaLoai"].ToString(),
+                                TenLoai = reader["sTenLoai"].ToString()
+                            });
+                        }
+                    }
+                }
+            }
+
+            return danhSachLoaiHang;
+        }
+
+
         public bool ThemLoaiHang(LoaiHangModel loaiHang)
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
@@ -86,6 +124,24 @@ namespace BTL_QLBH.Controller
                     int rowsAffected = command.ExecuteNonQuery();
 
                     return rowsAffected > 0;
+                }
+            }
+        }
+        public bool MaLoaiHangTonTai(string maLoai)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                string query = "SELECT COUNT(*) FROM tblLoaiHang WHERE sMaLoai = @MaLoai";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@MaLoai", maLoai);
+
+                    connection.Open();
+                    int count = (int)command.ExecuteScalar();
+
+                    // Trả về true nếu mã loại hàng đã tồn tại, ngược lại trả về false
+                    return count > 0;
                 }
             }
         }
