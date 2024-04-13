@@ -222,12 +222,12 @@ namespace BTL_QLBH.View
         }
         private void screen_Click(object sender, EventArgs e)
         {
-            cryKhachHang report = new cryKhachHang();
-            //string path = string.Format("D:\\C#\\btlcsharp\\BTL_QLBH\\cryKhachHang.rpt", Application.StartupPath);
-            //report.Load(path);
-            frmBaoCao frm = new frmBaoCao();
-            frm.crystalReportViewer1.ReportSource = report;
-            frm.Show();
+            //cryKhachHang report = new cryKhachHang();
+            ////string path = string.Format("D:\\C#\\btlcsharp\\BTL_QLBH\\cryKhachHang.rpt", Application.StartupPath);
+            ////report.Load(path);
+            //frmBaoCao frm = new frmBaoCao();
+            //frm.crystalReportViewer1.ReportSource = report;
+            //frm.Show();
         }
         private void EnabledFormKhachHang()
         {

@@ -30,7 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.resetLoaiHang = new System.Windows.Forms.Button();
             this.searchLoaiHang = new System.Windows.Forms.Button();
             this.deleteLoaiHang = new System.Windows.Forms.Button();
@@ -60,7 +59,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.resetLoaiHang);
             this.groupBox1.Controls.Add(this.searchLoaiHang);
             this.groupBox1.Controls.Add(this.deleteLoaiHang);
@@ -77,21 +75,10 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Loại Hàng";
             // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(596, 102);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 29);
-            this.button1.TabIndex = 37;
-            this.button1.Text = "In Danh Sách";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // resetLoaiHang
             // 
             this.resetLoaiHang.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.resetLoaiHang.Location = new System.Drawing.Point(486, 102);
+            this.resetLoaiHang.Location = new System.Drawing.Point(545, 104);
             this.resetLoaiHang.Name = "resetLoaiHang";
             this.resetLoaiHang.Size = new System.Drawing.Size(90, 29);
             this.resetLoaiHang.TabIndex = 36;
@@ -102,7 +89,7 @@
             // searchLoaiHang
             // 
             this.searchLoaiHang.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.searchLoaiHang.Location = new System.Drawing.Point(13, 101);
+            this.searchLoaiHang.Location = new System.Drawing.Point(72, 103);
             this.searchLoaiHang.Name = "searchLoaiHang";
             this.searchLoaiHang.Size = new System.Drawing.Size(90, 29);
             this.searchLoaiHang.TabIndex = 32;
@@ -114,7 +101,7 @@
             // 
             this.deleteLoaiHang.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.deleteLoaiHang.BackColor = System.Drawing.Color.Transparent;
-            this.deleteLoaiHang.Location = new System.Drawing.Point(362, 102);
+            this.deleteLoaiHang.Location = new System.Drawing.Point(421, 104);
             this.deleteLoaiHang.Name = "deleteLoaiHang";
             this.deleteLoaiHang.Size = new System.Drawing.Size(90, 29);
             this.deleteLoaiHang.TabIndex = 35;
@@ -125,7 +112,7 @@
             // addLoaiHang
             // 
             this.addLoaiHang.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.addLoaiHang.Location = new System.Drawing.Point(126, 101);
+            this.addLoaiHang.Location = new System.Drawing.Point(185, 103);
             this.addLoaiHang.Name = "addLoaiHang";
             this.addLoaiHang.Size = new System.Drawing.Size(90, 29);
             this.addLoaiHang.TabIndex = 33;
@@ -136,7 +123,7 @@
             // updateLoaiHang
             // 
             this.updateLoaiHang.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.updateLoaiHang.Location = new System.Drawing.Point(240, 102);
+            this.updateLoaiHang.Location = new System.Drawing.Point(299, 104);
             this.updateLoaiHang.Name = "updateLoaiHang";
             this.updateLoaiHang.Size = new System.Drawing.Size(90, 29);
             this.updateLoaiHang.TabIndex = 34;
@@ -231,7 +218,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.MaskedTextBox txtMaLoai;
         private System.Windows.Forms.MaskedTextBox txtTenLoai;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button resetLoaiHang;
         private System.Windows.Forms.Button searchLoaiHang;
         private System.Windows.Forms.Button deleteLoaiHang;

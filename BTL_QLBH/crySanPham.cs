@@ -16,14 +16,14 @@ namespace BTL_QLBH {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class cryKhachHang : ReportClass {
+    public class crySanPham : ReportClass {
         
-        public cryKhachHang() {
+        public crySanPham() {
         }
         
         public override string ResourceName {
             get {
-                return "cryKhachHang.rpt";
+                return "crySanPham.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace BTL_QLBH {
         
         public override string FullResourceName {
             get {
-                return "BTL_QLBH.cryKhachHang.rpt";
+                return "BTL_QLBH.crySanPham.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace BTL_QLBH {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedcryKhachHang : Component, ICachedReport {
+    public class CachedcrySanPham : Component, ICachedReport {
         
-        public CachedcryKhachHang() {
+        public CachedcrySanPham() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace BTL_QLBH {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            cryKhachHang rpt = new cryKhachHang();
+            crySanPham rpt = new crySanPham();
             rpt.Site = this.Site;
             return rpt;
         }

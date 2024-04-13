@@ -19,7 +19,7 @@ namespace BTL_QLBH.View
 
         private void customerMenu_Click(object sender, EventArgs e)
         {
-            Customer customer = new Customer();
+            frmNCC customer = new frmNCC();
             customer.MdiParent = this;
             customer.Dock = DockStyle.Fill;
             customer.Show();
@@ -30,6 +30,30 @@ namespace BTL_QLBH.View
             loaiHang.MdiParent = this;
             loaiHang.Dock = DockStyle.Fill;
             loaiHang.Show();
+        }
+
+        private void menuPhieuNhap_Click(object sender, EventArgs e)
+        {
+            frmPhieuNhap phieuNhap = new frmPhieuNhap();
+            phieuNhap.MdiParent = this;
+            phieuNhap.Dock = DockStyle.Fill;
+            phieuNhap.Show();
+        }
+
+        private void createInvoiceMenu_Click(object sender, EventArgs e)
+        {
+            frmHDBan phieuNhap = new frmHDBan();
+            phieuNhap.MdiParent = this;
+            phieuNhap.Dock = DockStyle.Fill;
+            phieuNhap.Show();
+        }
+
+        private void staffMenu_Click(object sender, EventArgs e)
+        {
+            frmNhanVien nv = new frmNhanVien();
+            nv.MdiParent = this;
+            nv.Dock = DockStyle.Fill;
+            nv.Show();
         }
     }
 }

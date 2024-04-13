@@ -69,18 +69,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\HoaDonController.cs" />
     <Compile Include="Controller\LoginController.cs" />
     <Compile Include="Controller\KhachHangController.cs" />
     <Compile Include="Controller\LoaiHangController.cs" />
+    <Compile Include="Controller\NhaCungCapController.cs" />
+    <Compile Include="Controller\NhanVienController.cs" />
+    <Compile Include="Controller\PhieuNhapController.cs" />
     <Compile Include="Controller\SanPhamController.cs" />
-    <Compile Include="cryKhachHang.cs">
+    <Compile Include="crySanPham.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>cryKhachHang.rpt</DependentUpon>
+      <DependentUpon>crySanPham.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="crysCTHDBan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crysCTHDBan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crysDSHDBan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crysDSHDBan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crysDSNV.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crysDSNV.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\HoaDonModel.cs" />
     <Compile Include="Model\KhachHang.cs" />
     <Compile Include="Model\LoaiHangModel.cs" />
+    <Compile Include="Model\NhaCungCap.cs" />
+    <Compile Include="Model\NhanVienModel.cs" />
+    <Compile Include="Model\PhieuNhapModel.cs" />
     <Compile Include="Model\SanPhamModel.cs" />
     <Compile Include="View\Customer.cs">
       <SubType>Form</SubType>
@@ -88,17 +114,59 @@
     <Compile Include="View\Customer.Designer.cs">
       <DependentUpon>Customer.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmHoaDonBan.cs">
+    <Compile Include="View\frmChiTietHDBan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmHoaDonBan.Designer.cs">
-      <DependentUpon>frmHoaDonBan.cs</DependentUpon>
+    <Compile Include="View\frmChiTietHDBan.Designer.cs">
+      <DependentUpon>frmChiTietHDBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmChiTietHDNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmChiTietHDNhap.Designer.cs">
+      <DependentUpon>frmChiTietHDNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmDSHDBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmDSHDBan.Designer.cs">
+      <DependentUpon>frmDSHDBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmDSHDNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmDSHDNhap.Designer.cs">
+      <DependentUpon>frmDSHDNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmHDBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmHDBan.Designer.cs">
+      <DependentUpon>frmHDBan.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmLoaiHang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\frmLoaiHang.Designer.cs">
       <DependentUpon>frmLoaiHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmNCC.Designer.cs">
+      <DependentUpon>frmNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmNhanVien.Designer.cs">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmPhieuNhap.Designer.cs">
+      <DependentUpon>frmPhieuNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Home.cs">
       <SubType>Form</SubType>
@@ -120,24 +188,51 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\QuanLyCuaHangView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\QuanLyCuaHangView.Designer.cs">
-      <DependentUpon>QuanLyCuaHangView.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="cryKhachHang.rpt">
+    <EmbeddedResource Include="crySanPham.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>cryKhachHang.cs</LastGenOutput>
+      <LastGenOutput>crySanPham.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crysCTHDBan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crysCTHDBan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crysDSHDBan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crysDSHDBan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crysDSNV.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crysDSNV.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmHoaDonBan.resx">
-      <DependentUpon>frmHoaDonBan.cs</DependentUpon>
+    <EmbeddedResource Include="View\frmChiTietHDBan.resx">
+      <DependentUpon>frmChiTietHDBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmChiTietHDNhap.resx">
+      <DependentUpon>frmChiTietHDNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmDSHDBan.resx">
+      <DependentUpon>frmDSHDBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmDSHDNhap.resx">
+      <DependentUpon>frmDSHDNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmHDBan.resx">
+      <DependentUpon>frmHDBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmLoaiHang.resx">
       <DependentUpon>frmLoaiHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmNCC.resx">
+      <DependentUpon>frmNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmNhanVien.resx">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmPhieuNhap.resx">
+      <DependentUpon>frmPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
@@ -158,9 +253,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="View\QuanLyCuaHangView.resx">
-      <DependentUpon>QuanLyCuaHangView.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
