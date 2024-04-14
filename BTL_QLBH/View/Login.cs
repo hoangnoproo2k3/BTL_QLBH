@@ -1,4 +1,5 @@
 ﻿using BTL_QLBH.Controller;
+using BTL_QLBH.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,7 +40,6 @@ namespace BTL_QLBH.View
                 passwordTextBox.PasswordChar = '●'; // Ẩn mật khẩu
             }
         }
-
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             string username = usernameTextBox.Text;
@@ -50,14 +50,22 @@ namespace BTL_QLBH.View
                 lblError.Text = errorMessage;
                 return;
             }
-            // Gọi phương thức xác thực từ controller
             bool isAuthenticated = _loginController.AuthenticateUser(username, password);
 
             if (isAuthenticated)
             {
-               Home home = new Home();
-                home.Show();
-                this.Hide();
+                User loggedInUser = _loginController.GetUserInfo(username);
+                if (loggedInUser != null)
+                {
+                    UserSession.Instance.SetLoggedInUser(loggedInUser);
+                    Home home = new Home();
+                    home.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Không thể lấy thông tin về người dùng!");
+                }
             }
             else
             {

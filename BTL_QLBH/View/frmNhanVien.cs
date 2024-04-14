@@ -48,6 +48,7 @@ namespace BTL_QLBH.View
                 nv.LuongCoBan = float.Parse(txtLuongCoBan.Text);
                 nv.PhuCap = float.Parse(txtPhuCap.Text);
                 _nhanVienController.ThemNhanVien(nv);
+                HienThiDanhSachNhanVien();
             }
             else
             {
@@ -156,6 +157,7 @@ namespace BTL_QLBH.View
         }
         private void btnReset_Click(object sender, EventArgs e)
         {
+            txtMaNV.Enabled = true;
             ResetForm();
             HienThiDanhSachNhanVien();
         }
@@ -171,7 +173,6 @@ namespace BTL_QLBH.View
             dtpNgaySinh.Value = DateTime.Now;
             dtpNgayVaoLam.Value = DateTime.Now;
         }
-
         private void btnInBaoCao_Click(object sender, EventArgs e)
         {
             crysDSNV report = new crysDSNV();

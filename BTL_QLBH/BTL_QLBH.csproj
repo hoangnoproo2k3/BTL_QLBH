@@ -76,13 +76,9 @@
     <Compile Include="Controller\NhaCungCapController.cs" />
     <Compile Include="Controller\NhanVienController.cs" />
     <Compile Include="Controller\PhieuNhapController.cs" />
+    <Compile Include="Controller\SanPhamController-form.cs" />
     <Compile Include="Controller\SanPhamController.cs" />
-    <Compile Include="crySanPham.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>crySanPham.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Controller\UserController.cs" />
     <Compile Include="crysCTHDBan.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -107,7 +103,10 @@
     <Compile Include="Model\NhaCungCap.cs" />
     <Compile Include="Model\NhanVienModel.cs" />
     <Compile Include="Model\PhieuNhapModel.cs" />
+    <Compile Include="Model\SanPhamModel-form.cs" />
     <Compile Include="Model\SanPhamModel.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Model\UserSession.cs" />
     <Compile Include="View\Customer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +167,18 @@
     <Compile Include="View\frmPhieuNhap.Designer.cs">
       <DependentUpon>frmPhieuNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmSanPham.Designer.cs">
+      <DependentUpon>frmSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmTaiKhoan.Designer.cs">
+      <DependentUpon>frmTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,10 +199,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="crySanPham.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crySanPham.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="crysCTHDBan.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crysCTHDBan.cs</LastGenOutput>
@@ -233,6 +240,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmPhieuNhap.resx">
       <DependentUpon>frmPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmSanPham.resx">
+      <DependentUpon>frmSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmTaiKhoan.resx">
+      <DependentUpon>frmTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
