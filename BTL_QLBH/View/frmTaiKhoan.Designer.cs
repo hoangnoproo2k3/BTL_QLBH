@@ -169,7 +169,7 @@
             this.grpTTUser.Controls.Add(this.txtMatKhau);
             this.grpTTUser.Controls.Add(this.label5);
             this.grpTTUser.Controls.Add(this.txtTenDangNhap);
-            this.grpTTUser.Location = new System.Drawing.Point(30, 281);
+            this.grpTTUser.Location = new System.Drawing.Point(42, 318);
             this.grpTTUser.Name = "grpTTUser";
             this.grpTTUser.Size = new System.Drawing.Size(735, 191);
             this.grpTTUser.TabIndex = 14;
@@ -189,7 +189,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Location = new System.Drawing.Point(30, 23);
+            this.groupBox1.Location = new System.Drawing.Point(42, 60);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(735, 237);
             this.groupBox1.TabIndex = 15;
@@ -200,7 +200,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 558);
+            this.ClientSize = new System.Drawing.Size(1000, 698);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grpTTUser);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

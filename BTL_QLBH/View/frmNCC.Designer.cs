@@ -43,7 +43,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNCC)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -52,7 +51,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dataGridViewNCC);
-            this.groupBox2.Location = new System.Drawing.Point(73, 341);
+            this.groupBox2.Location = new System.Drawing.Point(68, 293);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(776, 260);
             this.groupBox2.TabIndex = 11;
@@ -85,7 +84,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(72, 90);
+            this.groupBox1.Location = new System.Drawing.Point(67, 42);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(776, 223);
             this.groupBox1.TabIndex = 10;
@@ -195,17 +194,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã NCC";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(354, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(182, 29);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Nhà Cung Cấp";
-            // 
             // frmNCC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -213,7 +201,6 @@
             this.ClientSize = new System.Drawing.Size(939, 667);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
             this.Name = "frmNCC";
@@ -223,7 +210,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -244,6 +230,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
     }
 }

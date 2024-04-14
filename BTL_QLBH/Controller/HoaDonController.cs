@@ -16,55 +16,6 @@ namespace BTL_QLBH.Controller
         {
             _connectionString = connectionString;
         }
-        private float tongTien = 0;
-
-        // Phương thức tính tổng tiền
-        private void TinhTongTien(float soLuong, float donGia, float mucGiamGia)
-        {
-            tongTien += soLuong * donGia * mucGiamGia;
-        }
-        public float LayTongTien()
-        {
-            return tongTien;
-        }
-        public void ThemMoiHoaDon(HoaDon hoaDon)
-        {
-            using (SqlConnection connection = new SqlConnection(_connectionString))
-            {
-                string query = "INSERT INTO tblHoaDon (sSoHD, sMaNV, sTenKH, sSDT, fTongTien, dNgayLap) " +
-                               "VALUES (@sSoHD, @sMaNV, @sTenKH, @sSDT, @fTongTien, @dNgayLap)";
-
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@sSoHD", hoaDon.SoHD);
-                command.Parameters.AddWithValue("@sMaNV", hoaDon.MaNV);
-                command.Parameters.AddWithValue("@sTenKH", hoaDon.TenKH);
-                command.Parameters.AddWithValue("@sSDT", hoaDon.SDT);
-                command.Parameters.AddWithValue("@fTongTien", hoaDon.TongTien);
-                command.Parameters.AddWithValue("@dNgayLap", hoaDon.NgayLap);
-
-                connection.Open();
-                command.ExecuteNonQuery();
-            }
-        }
-
-        public void ThemMoiChiTietHoaDon(ChiTietHoaDon chiTietHoaDon)
-        {
-            using (SqlConnection connection = new SqlConnection(_connectionString))
-            {
-                string query = "INSERT INTO tblCHITIET_HD_BANHANG (sSoHD, sMaSanPham, fSoLuongMua, fDonGia, fMucGiamGia) " +
-                               "VALUES (@sSoHD, @sMaSanPham, @fSoLuongMua, @fDonGia, @fMucGiamGia)";
-
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@sSoHD", chiTietHoaDon.SoHD);
-                command.Parameters.AddWithValue("@sMaSanPham", chiTietHoaDon.MaSanPham);
-                command.Parameters.AddWithValue("@fSoLuongMua", chiTietHoaDon.SoLuongMua);
-                command.Parameters.AddWithValue("@fDonGia", chiTietHoaDon.DonGia);
-                command.Parameters.AddWithValue("@fMucGiamGia", chiTietHoaDon.MucGiamGia);
-
-                connection.Open();
-                command.ExecuteNonQuery();
-            }
-        }
         public void ThemMoiHoaDon(HoaDonChung hoadon, DataTable chitietHoadonDetails)
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))

@@ -98,8 +98,8 @@ namespace BTL_QLBH.View
                     // Hiển thị danh sách sản phẩm đã chọn trong DataGridView
                     dataGridViewSelectedProducts.DataSource = null;
                     dataGridViewSelectedProducts.DataSource = selectedProducts;
-                    dataGridViewSelectedProducts.Columns["ProductID"].HeaderText = "Mã đồ uống";
-                    dataGridViewSelectedProducts.Columns["ProductName"].HeaderText = "Tên đồ uống";
+                    dataGridViewSelectedProducts.Columns["ProductID"].HeaderText = "Mã sản phẩm";
+                    dataGridViewSelectedProducts.Columns["ProductName"].HeaderText = "Tên sản phẩm";
                     dataGridViewSelectedProducts.Columns["Price"].HeaderText = "Đơn giá";
                     dataGridViewSelectedProducts.Columns["Discount"].HeaderText = "Mức giảm giá";
                     dataGridViewSelectedProducts.Columns["Quantity"].HeaderText = "Số lượng";
@@ -124,8 +124,8 @@ namespace BTL_QLBH.View
                 // Hiển thị danh sách sản phẩm đã chọn trong DataGridView
                 dataGridViewSelectedProducts.DataSource = null;
                 dataGridViewSelectedProducts.DataSource = selectedProducts;
-                dataGridViewSelectedProducts.Columns["ProductID"].HeaderText = "Mã đồ uống";
-                dataGridViewSelectedProducts.Columns["ProductName"].HeaderText = "Tên đồ uống";
+                dataGridViewSelectedProducts.Columns["ProductID"].HeaderText = "Mã sản phẩm";
+                dataGridViewSelectedProducts.Columns["ProductName"].HeaderText = "Tên sản phẩm";
                 dataGridViewSelectedProducts.Columns["Price"].HeaderText = "Đơn giá";
                 dataGridViewSelectedProducts.Columns["Discount"].HeaderText = "Mức giảm giá";
                 dataGridViewSelectedProducts.Columns["Quantity"].HeaderText = "Số lượng";
@@ -166,11 +166,11 @@ namespace BTL_QLBH.View
             }
             string nhanvienID = comboBoxNhanVien.SelectedValue.ToString();
             DateTime ngaylap = dateTimePickerNgaylap.Value;
-            if (ngaylap > DateTime.Today)
-            {
-                MessageBox.Show("Ngày lập không thể là ngày tương lai!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            //if (ngaylap > DateTime.Today)
+            //{
+            //    MessageBox.Show("Ngày lập không thể là ngày tương lai!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}
             // Tạo DataTable để chứa dữ liệu chi tiết hóa đơn
             DataTable chitietHoadonDetails = new DataTable();
             chitietHoadonDetails.Columns.Add("sMaSanPham", typeof(string));

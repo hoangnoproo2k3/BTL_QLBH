@@ -49,12 +49,12 @@
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.hệThốngToolStripMenuItem,
             this.danhMụcToolStripMenuItem,
-            this.quảnLýHóaĐơnToolStripMenuItem});
+            this.quảnLýHóaĐơnToolStripMenuItem,
+            this.hệThốngToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(52, 12);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(385, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(535, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
