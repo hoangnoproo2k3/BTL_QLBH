@@ -30,17 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.staffMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.accountMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.danhMụcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.customerMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.loaiHangMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýHóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createInvoiceMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.menuPhieuNhap = new System.Windows.Forms.ToolStripMenuItem();
+            this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.staffMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.accountMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.txtThongTin = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
+            this.ProductMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,36 +59,12 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // hệThốngToolStripMenuItem
-            // 
-            this.hệThốngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.staffMenu,
-            this.accountMenu});
-            this.hệThốngToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("hệThốngToolStripMenuItem.Image")));
-            this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
-            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
-            this.hệThốngToolStripMenuItem.Text = "Hệ Thống";
-            // 
-            // staffMenu
-            // 
-            this.staffMenu.Image = ((System.Drawing.Image)(resources.GetObject("staffMenu.Image")));
-            this.staffMenu.Name = "staffMenu";
-            this.staffMenu.Size = new System.Drawing.Size(160, 26);
-            this.staffMenu.Text = "Nhân Viên";
-            this.staffMenu.Click += new System.EventHandler(this.staffMenu_Click);
-            // 
-            // accountMenu
-            // 
-            this.accountMenu.Name = "accountMenu";
-            this.accountMenu.Size = new System.Drawing.Size(160, 26);
-            this.accountMenu.Text = "Tài Khoản";
-            this.accountMenu.Click += new System.EventHandler(this.accountMenu_Click);
-            // 
             // danhMụcToolStripMenuItem
             // 
             this.danhMụcToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.customerMenu,
-            this.loaiHangMenu});
+            this.loaiHangMenu,
+            this.ProductMenu});
             this.danhMụcToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("danhMụcToolStripMenuItem.Image")));
             this.danhMụcToolStripMenuItem.Name = "danhMụcToolStripMenuItem";
             this.danhMụcToolStripMenuItem.Size = new System.Drawing.Size(110, 24);
@@ -97,7 +74,7 @@
             // 
             this.customerMenu.Image = ((System.Drawing.Image)(resources.GetObject("customerMenu.Image")));
             this.customerMenu.Name = "customerMenu";
-            this.customerMenu.Size = new System.Drawing.Size(187, 26);
+            this.customerMenu.Size = new System.Drawing.Size(224, 26);
             this.customerMenu.Text = "Nhà Cung Cấp";
             this.customerMenu.Click += new System.EventHandler(this.customerMenu_Click);
             // 
@@ -105,7 +82,7 @@
             // 
             this.loaiHangMenu.Image = ((System.Drawing.Image)(resources.GetObject("loaiHangMenu.Image")));
             this.loaiHangMenu.Name = "loaiHangMenu";
-            this.loaiHangMenu.Size = new System.Drawing.Size(187, 26);
+            this.loaiHangMenu.Size = new System.Drawing.Size(224, 26);
             this.loaiHangMenu.Text = "Loại Hàng";
             this.loaiHangMenu.Click += new System.EventHandler(this.loaiHangMenu_Click);
             // 
@@ -134,6 +111,31 @@
             this.menuPhieuNhap.Text = "Phiếu Nhập";
             this.menuPhieuNhap.Click += new System.EventHandler(this.menuPhieuNhap_Click);
             // 
+            // hệThốngToolStripMenuItem
+            // 
+            this.hệThốngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.staffMenu,
+            this.accountMenu});
+            this.hệThốngToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("hệThốngToolStripMenuItem.Image")));
+            this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
+            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
+            this.hệThốngToolStripMenuItem.Text = "Hệ Thống";
+            // 
+            // staffMenu
+            // 
+            this.staffMenu.Image = ((System.Drawing.Image)(resources.GetObject("staffMenu.Image")));
+            this.staffMenu.Name = "staffMenu";
+            this.staffMenu.Size = new System.Drawing.Size(160, 26);
+            this.staffMenu.Text = "Nhân Viên";
+            this.staffMenu.Click += new System.EventHandler(this.staffMenu_Click);
+            // 
+            // accountMenu
+            // 
+            this.accountMenu.Name = "accountMenu";
+            this.accountMenu.Size = new System.Drawing.Size(160, 26);
+            this.accountMenu.Text = "Tài Khoản";
+            this.accountMenu.Click += new System.EventHandler(this.accountMenu_Click);
+            // 
             // txtThongTin
             // 
             this.txtThongTin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -154,6 +156,13 @@
             this.btnDangXuat.Text = "Đăng xuất";
             this.btnDangXuat.UseVisualStyleBackColor = true;
             this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
+            // 
+            // ProductMenu
+            // 
+            this.ProductMenu.Name = "ProductMenu";
+            this.ProductMenu.Size = new System.Drawing.Size(224, 26);
+            this.ProductMenu.Text = "Sản Phẩm";
+            this.ProductMenu.Click += new System.EventHandler(this.ProductMenu_Click);
             // 
             // Home
             // 
@@ -189,5 +198,6 @@
         private System.Windows.Forms.Button txtThongTin;
         private System.Windows.Forms.ToolStripMenuItem accountMenu;
         private System.Windows.Forms.Button btnDangXuat;
+        private System.Windows.Forms.ToolStripMenuItem ProductMenu;
     }
 }

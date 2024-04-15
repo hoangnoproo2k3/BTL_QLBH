@@ -50,7 +50,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtMa = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSanPham)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -59,7 +58,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dataGridViewSanPham);
-            this.groupBox2.Location = new System.Drawing.Point(92, 397);
+            this.groupBox2.Location = new System.Drawing.Point(83, 387);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(775, 239);
             this.groupBox2.TabIndex = 5;
@@ -99,7 +98,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtMa);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(91, 73);
+            this.groupBox1.Location = new System.Drawing.Point(82, 63);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(776, 317);
             this.groupBox1.TabIndex = 4;
@@ -270,17 +269,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã SP";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(375, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 29);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Sản Phẩm";
-            // 
             // frmSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -288,7 +276,7 @@
             this.ClientSize = new System.Drawing.Size(958, 657);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmSanPham";
             this.Text = "frmSanPham";
             this.Load += new System.EventHandler(this.frmSanPham_Load);
@@ -297,7 +285,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -325,6 +312,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtMa;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
     }
 }

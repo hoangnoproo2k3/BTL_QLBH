@@ -78,5 +78,13 @@ namespace BTL_QLBH.View
             loginForm.Show();
             this.Hide();
         }
+
+        private void ProductMenu_Click(object sender, EventArgs e)
+        {
+            frmSanPham nv = new frmSanPham();
+            nv.MdiParent = this;
+            nv.Dock = DockStyle.Fill;
+            nv.Show();
+        }
     }
 }
